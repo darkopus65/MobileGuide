@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MobileGuide.Pages.AttractionsPage"
+    Title="Attractions">
+    <ScrollView>
+        <StackLayout>
+            <Label
+                Text="Выберите фото для классификатора"
+                FontSize="Medium"
+                HorizontalOptions="Center" />
+            <Image
+                Source="{Binding ImageSource}"
+                HeightRequest="250" />
+            <ActivityIndicator
+                IsRunning="{Binding IndicatorIsRunning}"
+                IsVisible="{Binding IndicatorIsRunning}" />
+            <Label
+                Text="{Binding ResultText}"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="{Binding ResultFontSize}" />
+            <Button
+                VerticalOptions="End"
+                Text="Выбрать Фото"
+                Command="{Binding GetImageAndRunCommand}">
+            </Button>
+            <Button
+                VerticalOptions="End"
+                Text="Сделать Фото"
+                Command="{Binding SetImageAndRunCommand}">
+            </Button>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

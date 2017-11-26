@@ -1,0 +1,22 @@
+﻿{
+  "dependencies": {
+    "Microcharts.Forms": "0.7.1",
+    "Microsoft.Azure.Mobile.Client": "4.0.2",
+    "Microsoft.CSharp": "4.4.0",
+    "Microsoft.ProjectOxford.Vision": "1.0.393",
+    "Newtonsoft.Json": "10.0.3",
+    "PCLStorage": "1.0.2",
+    "Plugin.Permissions": "2.1.0",
+    "SkiaSharp": "1.59.2",
+    "SkiaSharp.Views": "1.59.2",
+    "SkiaSharp.Views.Forms": "1.59.2",
+    "Xam.Plugin.Media": "3.0.1",
+    "Xamarin.Forms": "2.5.0.91635"
+  },
+  "frameworks": {
+    "Xamarin.iOS,Version=v1.0": {}
+  },
+  "runtimes": {
+    "win": {}
+  }
+}

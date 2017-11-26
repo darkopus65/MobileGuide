@@ -1,0 +1,39 @@
+﻿{
+  "dependencies": {
+    "Microcharts.Forms": "0.7.1",
+    "Microsoft.Azure.Mobile.Client": "4.0.2",
+    "Microsoft.CSharp": "4.4.0",
+    "Microsoft.NETCore.Platforms": "2.0.1",
+    "Microsoft.ProjectOxford.Vision": "1.0.393",
+    "Microsoft.Win32.Primitives": "4.3.0",
+    "NETStandard.Library": "2.0.1",
+    "Newtonsoft.Json": "10.0.3",
+    "PCLStorage": "1.0.2",
+    "Plugin.Permissions": "2.1.0",
+    "SkiaSharp": "1.59.2",
+    "SkiaSharp.Views": "1.59.2",
+    "SkiaSharp.Views.Forms": "1.59.2",
+    "System.Runtime": "4.3.0",
+    "System.Runtime.Extensions": "4.3.0",
+    "System.Runtime.Handles": "4.3.0",
+    "System.Runtime.InteropServices": "4.3.0",
+    "System.Runtime.InteropServices.RuntimeInformation": "4.3.0",
+    "System.Runtime.Numerics": "4.3.0",
+    "System.Runtime.Serialization.Primitives": "4.3.0",
+    "System.Runtime.Serialization.Xml": "4.3.0",
+    "System.Security.Cryptography.Algorithms": "4.3.1",
+    "System.Security.Cryptography.Cng": "4.4.0",
+    "System.Security.Cryptography.OpenSsl": "4.4.0",
+    "System.Security.Cryptography.X509Certificates": "4.3.2",
+    "Xam.Plugin.Media": "3.0.1",
+    "Xamarin.Android.Support.Design": "23.3.0",
+    "Xamarin.Android.Support.v4": "23.3.0",
+    "Xamarin.Android.Support.v7.AppCompat": "23.3.0",
+    "Xamarin.Android.Support.v7.CardView": "23.3.0",
+    "Xamarin.Android.Support.v7.MediaRouter": "23.3.0",
+    "Xamarin.Forms": "2.5.0.91635"
+  },
+  "frameworks": {
+    "MonoAndroid,Version=v7.1": {}
+  }
+}
