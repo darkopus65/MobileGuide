@@ -8,7 +8,6 @@
         <ScrollView>
             <StackLayout
                 Margin="5">
-
                 <Button
                     Text="Attractions"
                     FontSize="Medium"
