@@ -73,17 +73,11 @@ namespace MobileGuide.ViewModel
                         ImageSource = ImageSource.FromFile(file.Path);
                         var temp = await MakePredictionRequest(file.Path);
 
-                        //Делает махинации с Vision по сделанной фото
+
                         Vision t = new Vision();
                         ResultText = await t.MakeSomeSummary(file.GetStream());
 
-                        //Здесь я подумал, что делать еще одну страницу мне лень
-                        //Ибо функционал будет отличаться на 2 строчки,
-                        //Поэтому чтобы распознавать совушек раскоментируйте нижнюю
-                        //А чтобы оставить Vision не трогайте верхние 2
-
-                        //Делает махинации с совушками по сделанной фото
-                        //SetPropsAfterPredictin(temp);
+                       
 
                         file.Dispose();
                     }
@@ -96,8 +90,7 @@ namespace MobileGuide.ViewModel
                 ResultIsVisible = true;
                 IndicatorIsRunning = false;
                 ResultText = ex.ToString();
-                //TODO Повесить обработчики
-                //Debug.WriteLine(ex);
+                
             }
         }
 
@@ -150,18 +143,18 @@ namespace MobileGuide.ViewModel
             {
                 var Zhukov = temp.Predictions.FindIndex(x => x.Tag == "Zhukov");
                 var themonumentofZhukov = temp.Predictions.FindIndex(x => x.Tag == "themonumentofZhukov");
-                if (temp.Predictions[themonumentofZhukov].Probability > temp.Predictions[Zhukov].Probability)
+                if (temp.Predictions[themonumentofZhukov].Probability > 0.5)
                 {
                     ResultIsVisible = true;
                     IndicatorIsRunning = false;
-                    //ImageSource = ImageSource.FromFile("triger.jpg");
+                    
                     ResultText = "Monument of Zhukov";
                     ResultFontSize = 72;
 
                 }
                 else
                 {
-                    ResultText = "Zhukov";
+                    ResultText = ":(";
                 }
             }
         }
