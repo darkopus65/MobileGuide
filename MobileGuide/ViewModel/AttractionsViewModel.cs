@@ -141,16 +141,26 @@ namespace MobileGuide.ViewModel
         {
             if (temp != null)
             {
-                var Zhukov = temp.Predictions.FindIndex(x => x.Tag == "Zhukov");
-                var themonumentofZhukov = temp.Predictions.FindIndex(x => x.Tag == "themonumentofZhukov");
-                if (temp.Predictions[themonumentofZhukov].Probability > 0.5)
+                var Zhukov_Red_Square = temp.Predictions.FindIndex(x => x.Tag == "Zhukov_Red_Square");
+                var Hatchepsut = temp.Predictions.FindIndex(x => x.Tag == "Hatchepsut");
+                if (temp.Predictions[Hatchepsut].Probability > 
+                    temp.Predictions[Zhukov_Red_Square].Probability
+                    && temp.Predictions[Hatchepsut].Probability > 0.7)
                 {
                     ResultIsVisible = true;
                     IndicatorIsRunning = false;
                     
-                    ResultText = "Monument of Zhukov";
+                    ResultText = "Hatchepsut";
                     ResultFontSize = 72;
 
+                }
+                else if(temp.Predictions[Zhukov_Red_Square].Probability > 0.7)
+                {
+                    ResultIsVisible = true;
+                    IndicatorIsRunning = false;
+
+                    ResultText = "Zhukov_Red_Square";
+                    ResultFontSize = 72;
                 }
                 else
                 {
@@ -178,7 +188,7 @@ namespace MobileGuide.ViewModel
             // Request headers - replace this example key with your valid subscription key.
             client.DefaultRequestHeaders.Add("Prediction-Key", "5651e72082274d6b9a4d9721835428cb");
             // Prediction URL - replace this example URL with your valid prediction URL.
-            string url = "https://southcentralus.api.cognitive.microsoft.com/customvision/v1.0/Prediction/d704c44b-b6b3-40f7-b685-be606f2443c4/image";
+            string url = "https://southcentralus.api.cognitive.microsoft.com/customvision/v1.0/Prediction/1ed7e60b-b1ac-40ce-b1c9-e55002c53d2b/image";
 
             HttpResponseMessage response;
 
